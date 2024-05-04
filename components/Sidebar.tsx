@@ -1,6 +1,6 @@
 'use client';
 
-import { BellIcon, Cookie, CreditCard, Inbox, MessageSquare, Settings, User } from "lucide-react";
+import { Bell, BellIcon, Cookie, CreditCard, Inbox, MessageSquare, Settings, User } from "lucide-react";
 import UserItem from "./UserItem";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
 
@@ -12,19 +12,23 @@ export default function Sidebar() {
             items: [
                 {
                     link: "/",
+                    icon: <User></User>,
                     text: "Profile"
                 },
                 {
                     link: "/",
+                    icon: <CreditCard></CreditCard>,
                     text: "Billing"
                 },
                 {
                     link: "/",
+                    icon: <Inbox></Inbox>,
                     text: "Inbox"
                 },
                 {
                     link: "/",
-                    text: "Billing"
+                    icon: <MessageSquare></MessageSquare>,
+                    text: "Messages"
                 }
             ]
         },
@@ -33,15 +37,18 @@ export default function Sidebar() {
             items: [
                 {
                     link: "/",
-                    text: "General Settings"
+                    text: "General Settings",
+                    icon: <Settings></Settings>
                 },
                 {
                     link: "/",
-                    text: "Privacy"
+                    text: "Privacy",
+                    icon: <Cookie></Cookie>
                 },
                 {
                     link: "/",
-                    text: "Notifications"
+                    text: "Notifications",
+                    icon: <BellIcon></BellIcon>
                 }
             ]
         }
@@ -59,7 +66,10 @@ export default function Sidebar() {
 
         <CommandGroup key = {key} heading = {menu.group}>
             {menu.items.map((option: any, optionKey: number) =>
-            <CommandItem key = {optionKey}>{option.text}</CommandItem>
+            <CommandItem key = {optionKey} className="flex gap-2">
+                {option.icon}
+                {option.text}
+                </CommandItem>
             )}
 
         </CommandGroup>
