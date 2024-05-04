@@ -7,9 +7,7 @@ export default function Home() {
   return (
     <div>
 
-      <Table>
-        <TableHead>H</TableHead>
-      </Table>
+      <Button>Click me</Button>
 
     </div>
   );
