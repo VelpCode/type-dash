@@ -6,8 +6,8 @@ import { TableHead } from "@/components/ui/table";
 export default function Home() {
   return (
     <div>
-
-      <Button>Click me</Button>
+      Homepage
+      <Button variant={"outline"}>Click me</Button>
 
     </div>
   );

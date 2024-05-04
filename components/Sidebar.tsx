@@ -56,7 +56,7 @@ export default function Sidebar() {
     ]
 
     return (
-        <div className="w-[300px] border-r h-screen flex flex-col min-h-screen p-4 ">
+        <div className="fixed w-[300px] border-r h-screen flex flex-col min-h-screen p-4 ">
             <UserItem />
             <div className = "grow">
             <Command>
@@ -66,7 +66,7 @@ export default function Sidebar() {
 
         <CommandGroup key = {key} heading = {menu.group}>
             {menu.items.map((option: any, optionKey: number) =>
-            <CommandItem key = {optionKey} className="flex gap-2">
+            <CommandItem key = {optionKey} className="flex gap-2 cursor-pointer">
                 {option.icon}
                 {option.text}
                 </CommandItem>
