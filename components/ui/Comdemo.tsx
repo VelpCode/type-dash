@@ -28,7 +28,7 @@ import {
     return (
       <Command className="rounded-lg border shadow-md">
         <CommandInput placeholder="Type a command or search..." />
-        <CommandList>
+        {open &&<CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <CommandItem>
@@ -62,7 +62,7 @@ import {
               <CommandShortcut>⌘S</CommandShortcut>
             </CommandItem>
           </CommandGroup>
-        </CommandList>
+        </CommandList>}
       </Command>
     )
   }
