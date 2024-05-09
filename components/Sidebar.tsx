@@ -1,5 +1,7 @@
 'use client';
 
+
+import { useRouter } from "next/router";
 import { Bell, BellIcon, Cookie, CreditCard, Inbox, MessageSquare, Settings, User } from "lucide-react";
 import UserItem from "./UserItem";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
@@ -36,7 +38,7 @@ export default function Sidebar() {
             group: "Settings",
             items: [
                 {
-                    link: "/",
+                    link: "/settings",
                     text: "General Settings",
                     icon: <Settings></Settings>
                 },
@@ -66,7 +68,7 @@ export default function Sidebar() {
 
         <CommandGroup key = {key} heading = {menu.group}>
             {menu.items.map((option: any, optionKey: number) =>
-            <CommandItem key = {optionKey} className="flex gap-2 cursor-pointer">
+            <CommandItem key = {optionKey} className="flex gap-2 cursor-pointer" onClick={() => handleNavigation(option.link) }>
                 {option.icon}
                 {option.text}
                 </CommandItem>

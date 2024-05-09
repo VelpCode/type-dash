@@ -30,24 +30,30 @@ export default function Mainpage() {
 
     ]
 
-    
+
 
 
     return (
 
 
         <div>
-
-
+            
+            <div className=" mt-10 ml-5">
+                <h1 className="font-semibold text-neutral-800 text-lg">Welcome Back Aman!</h1>
+                <p className="text-sm text-neutral-500">Get back at your fitness, meal, and health goals harder than ever.  </p>
+            </div>
             <div className="grid grid-cols-3">
 
                 {Boxes.map((item, index) => (
 
-                    <div className=" text-neutral-500 gap-4 border shadow-sm p-10 h-[300px] rounded-xl w-[300px] mt-10 ml-3">
+                    <div className=" text-neutral-500 border shadow-sm p-10 h-[300px] rounded-xl w-[400px] mt-10 ml-3 cursor-pointer">
                         <div className="flex gap-4 border-b">{item.icon}{item.name}</div>
                         <div className="subhead">
                             <p className="mt-4 text-xs">Recents</p>
-                            <div className = "p-4 border rounded-lg mt-2"></div>
+                            <div className = "h-10 border rounded-lg mt-2"></div>
+                            <div className = "h-10 border rounded-lg mt-2"></div>
+                            <div className = "h-10 border rounded-lg mt-2"></div>
+
                         </div>
                     </div>
 
