@@ -30,6 +30,8 @@ export default function Mainpage() {
 
     ]
 
+    
+
 
     return (
 
@@ -41,7 +43,13 @@ export default function Mainpage() {
 
                 {Boxes.map((item, index) => (
 
-                    <div className="flex gap-4 border shadow-sm p-10 h-[300px] rounded-xl w-[300px] mt-10 ml-3">{item.icon}{item.name}</div>
+                    <div className=" text-neutral-500 gap-4 border shadow-sm p-10 h-[300px] rounded-xl w-[300px] mt-10 ml-3">
+                        <div className="flex gap-4 border-b">{item.icon}{item.name}</div>
+                        <div className="subhead">
+                            <p className="mt-4 text-xs">Recents</p>
+                            <div className = "p-4 border rounded-lg mt-2"></div>
+                        </div>
+                    </div>
 
                 ))}
 
