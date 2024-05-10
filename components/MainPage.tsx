@@ -50,7 +50,7 @@ export default function Mainpage() {
                         <div className="flex gap-4 border-b">{item.icon}{item.name}</div>
                         <div className="subhead">
                             <p className="mt-4 text-xs">Recents</p>
-                            <div className = "h-10 border rounded-lg mt-2"></div>
+                            <div className = "h-10 border rounded-lg mt-2 p-2 text-xs">Backday: </div>
                             <div className = "h-10 border rounded-lg mt-2"></div>
                             <div className = "h-10 border rounded-lg mt-2"></div>
 
